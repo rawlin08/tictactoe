@@ -1,0 +1,89 @@
+:root {
+    --darkNavy: #1A2A33;
+    --darkerNavy: #10212A;
+    --lightNavy: #1F3641;
+    --yellow: #F2B137;
+    --innerYellow: #CC8B13;
+    --lightBlue: #31C3BD;
+    --innerLightBlue: #118C87;
+    --darkWhite: #A8BFC9;
+    --lightWhite: #DBE8ED;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--darkNavy);   
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+}
+
+.marksShow {
+    display: flex;
+}
+
+.pick {
+    font-size: 16px;
+
+}
+
+.marks {
+    margin: 24px 0 17px 0;
+}
+
+.pickPlayer {
+    background-color: var(--lightNavy);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 460px;color: var(--darkWhite);
+    margin: 0 0 40px 0;
+    box-shadow: inset 0 -8px 0 0 var(--darkerNavy);
+    border-radius: 15px;
+}
+
+.reminder {
+    font-size: 14px;
+    color: var(--darkWhite);
+    font-weight: 500;
+    letter-spacing: 0.88px;
+    opacity: 0.5;
+}
+
+.newGame {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+}
+
+.CPU {
+    margin: 0 0 20px 0;
+    background-color: var(--yellow);
+    box-shadow: inset 0 -8px 0 0 var(--innerYellow);
+    border-radius: 15px;
+    border: none;
+    padding: 20px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.player {
+    background-color: var(--lightBlue);
+    box-shadow: inset 0 -8px 0 0 var(--innerLightBlue);
+    border-radius: 15px;
+    border: none;
+    padding: 20px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+}
