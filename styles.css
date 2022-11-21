@@ -8,6 +8,7 @@
     --innerLightBlue: #118C87;
     --darkWhite: #A8BFC9;
     --lightWhite: #DBE8ED;
+    --gray: #6B8997;
 }
 
 html {
@@ -27,13 +28,14 @@ body {
     place-content: center;
 }
 
+/* Index Page */
+
 .marksShow {
     display: flex;
 }
 
 .pick {
     font-size: 16px;
-
 }
 
 .marks {
@@ -86,4 +88,148 @@ body {
     font-family: inherit;
     font-size: 20px;
     font-weight: bold;
+}
+
+/* Game Page */
+
+
+.controlCenter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 0 20px 0;
+    height: 52px;
+}
+
+.xMark, .oMark {
+    width: 32px;
+    height: 32px;
+}
+
+.xMark {
+    color: var(--lightBlue);
+}
+
+.oMark {
+    color: var(--yellow);
+}
+
+.showMarks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.turnDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--lightNavy);
+    box-shadow: inset 0 -4px 0 0 var(--darkerNavy);
+}
+
+.turn {
+    font-weight: bold;
+    color: var(--darkWhite);
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.restart {
+    justify-self: end;
+}
+
+.restartMark {
+    width: 20px;
+    height: 20px;
+}
+
+.restartButton {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--darkWhite);
+    box-shadow: inset 0 -4px 0 0 var(--gray);
+    padding: 16px;
+}
+
+.grid {
+    width: 460px;
+    height: 460px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 0 20px 0;
+    gap: 20px;
+}
+
+.block {
+    width: 140px;
+    height: 140px;
+    background-color: var(--lightNavy);
+    box-shadow: inset 0 -8px 0 0 var(--darkerNavy);
+    border-radius: 15px;
+    margin: 0;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.xSlot {
+    background-color: var(--lightBlue);
+    border-radius: 15px;
+}
+
+.xText {
+    margin: 13px 0 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.88px;
+}
+
+.xScore {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin: 0 0 11px 0;
+}
+
+.tieSlot {
+    background-color: var(--darkWhite);
+    border-radius: 15px;
+}
+
+.tieText {
+    margin: 13px 0 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.88px;
+}
+
+.tieScore {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin: 0 0 11px 0;
+}
+
+.oSlot {
+    background-color: var(--yellow);
+    border-radius: 15px;
+}
+
+.oText {
+    margin: 13px 0 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.88px;
+}
+
+.oScore {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin: 0 0 11px 0;
 }
