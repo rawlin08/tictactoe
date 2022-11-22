@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="indexScript.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet"> 
@@ -13,14 +14,18 @@
 <body>
     <main>
         <div class="marksShow">
-            <svg><use href="#icon-x"></use></svg>
-            <svg><use href="#icon-o"></use></svg>
+            <svg class="xMark"><use href="#icon-x"></use></svg>
+            <svg class="oMark"><use href="#icon-o"></use></svg>
         </div>
         <div class="pickPlayer">
             <h1 class="pick">PICK PLAYER 1'S MARK</h1>
             <div class="marks">
-                <button>X</button>
-                <button>O</button>
+                <button class="xButton">
+                    <svg class="xMarkButton"><use href="#icon-x"></use></svg>
+                </button>
+                <button class="oButton">
+                    <svg class="oMarkButton"><use href="#icon-o"></use></svg>
+                </button>
             </div>
             <p class="reminder">REMEMBER : X GOES FIRST</p>
         </div>

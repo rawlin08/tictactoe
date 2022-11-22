@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="gameScript.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet"> 
@@ -18,7 +19,7 @@
                 <svg class="oMark"><use href="#icon-o"></use></svg>
             </div>
             <div class="turnDisplay">
-                <p class="turn">X TURN</p>
+                <p class="turn"></p>
             </div>
             <div class="restart">
                 <button class="restartButton">
@@ -26,29 +27,37 @@
                 </button>
             </div>
         </div>
+        <dialog>
+            <p class="won"></p>
+            <div class="round">
+                <p class="winner"></p>
+            </div>
+            <button class="quit">QUIT</button>
+            <button class="next">NEXT ROUND</button>
+        </dialog>
         <div class="grid">
-            <div class="block" data-block></div>
-            <div class="block" data-block></div>
-            <div class="block" data-block></div>
-            <div class="block" data-block></div>
-            <div class="block" data-block></div>
-            <div class="block" data-block></div>
-            <div class="block" data-block></div>
-            <div class="block" data-block></div>
-            <div class="block" data-block></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
         </div>
         <div class="score">
             <div class="xSlot">
                 <p class="xText">X (P1)</p>
-                <p class="xScore">0</p>
+                <p class="xScore"></p>
             </div>
             <div class="tieSlot">
                 <p class="tieText">TIES</p>
-                <p class="tieScore">0</p>
+                <p class="tieScore"></p>
             </div>
             <div class="oSlot">
                 <p class="oText">O (P2)</p>
-                <p class="oScore">0</p>
+                <p class="oScore"></p>
             </div>
         </div>
     </main>
@@ -62,6 +71,12 @@
         </symbol>
         <symbol id="icon-restart" viewBox="0 0 20 20">
             <path d="M19.524 0h-1.88a.476.476 0 0 0-.476.499l.159 3.284A9.81 9.81 0 0 0 9.835.317C4.415.317-.004 4.743 0 10.167.004 15.597 4.406 20 9.835 20a9.796 9.796 0 0 0 6.59-2.536.476.476 0 0 0 .019-.692l-1.348-1.349a.476.476 0 0 0-.65-.022 6.976 6.976 0 0 1-9.85-.63 6.987 6.987 0 0 1 .63-9.857 6.976 6.976 0 0 1 10.403 1.348l-4.027-.193a.476.476 0 0 0-.498.476v1.881c0 .263.213.476.476.476h7.944A.476.476 0 0 0 20 8.426V.476A.476.476 0 0 0 19.524 0Z" fill="#1F3641"/>
+        </symbol>
+        <symbol id="icon-x-outline" viewBox="0 0 64 64">
+            <path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/>
+        </symbol>
+        <symbol id="icon-o-outline" viewBox="0 0 66 66">
+            <path d="M33 1c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C15.327 65 1 50.673 1 33 1 15.327 15.327 1 33 1Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" stroke="#F2B137" stroke-width="2" fill="none"/>
         </symbol>
     </svg>
 
